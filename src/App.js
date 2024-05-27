@@ -1,9 +1,16 @@
 import logo from './logo.svg';
 import './App.css';
 
+function Heading(){
+  return(
+    <h1>This is an h1 heading</h1>
+  )
+}
+
 function App() {
   return (
     <div className="App">
+    <Heading/>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
