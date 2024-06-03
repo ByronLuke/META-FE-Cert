@@ -1,7 +1,9 @@
 
 function Heading(props){
     return(
-      <h1>Hello {props.firstName}</h1>
+      <div>
+              <h1>Task: Add a button and handle a click event</h1>
+      </div>
     )
   }
 
