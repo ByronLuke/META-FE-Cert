@@ -1,19 +1,28 @@
-import React, { useState } from "react";
-import Fruits from "./components/Fruits";
-import FruitsCounter from "./components/FruitsCounter";
+import React from "react";
+import Contact from "./Contact";
+import About from "./AboutLittleLemon";
+import Homepage from "./Homepage";
+import { Routes,Route,Link } from "react-router-dom";
+import logo from "./assets/logo.png"
+
 
 function App() {
-    const [fruits]=useState([
-        {fruitName: "apple", id: 1},
-        {fruitName: "apple", id: 2},
-        {fruitName: "plum", id: 3}
-    ])
+
   return (
-    <div className="App">
-      <h1>Where should the state go?</h1>
-      <Fruits fruits={fruits}/>
-      <FruitsCounter fruits={fruits}/>
-    </div>
+    <React.Fragment>
+      <nav>
+  <Link to="/" className="nav-item">Homepage</Link>
+  <Link to="/contact" className="nav-item">Contact</Link>
+  <Link to="/about" className="nav-item">About</Link>
+</nav>
+<Routes>
+  <Route path="/" element={<Homepage/>}/>
+  <Route path="/about" element={<About/>}/>
+  <Route path="/contact" element={<Contact/>}/>
+</Routes>
+<img src={logo} alt="Logo"></img>
+    </React.Fragment>
+
   );
 };
 
